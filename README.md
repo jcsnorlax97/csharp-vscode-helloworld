@@ -44,6 +44,11 @@
     - Command (Example): `dotnet run --project src/CSharp.VSCode.HelloWorld.ConsoleApp.v60`
 
 
+### Additional Comments
+
+- `README.md` and `.gitignore` need to be created separately.
+
+
 ### References
 
 - [Microsoft - .NET - dotnet new](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
