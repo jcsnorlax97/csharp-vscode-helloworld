@@ -1,7 +1,8 @@
 # HelloWorld (CSharp + VSCode)
 
+## I. Essential
 
-### How to Setup?
+### A. How to Setup?
 
 1. Install `dotnet-sdk` (latest version - 6.0)
     - Homebrew
@@ -32,8 +33,7 @@
     - Command: `dotnet sln <solution-name> add **/*.csproj`
     - Command (Example): `dotnet sln CSharp.VSCode.HelloWorld.sln add **/*.csproj`
 
-
-### How to Build & Run?
+### B. How to Build & Run?
 
 1. Build a specific project.
     - Command: `dotnet build <project-path>`
@@ -43,13 +43,51 @@
     - Command: `dotnet run --project <project-path>`
     - Command (Example): `dotnet run --project src/CSharp.VSCode.HelloWorld.ConsoleApp.v60`
 
+### C. How to Setup & Run Unit Tests?
 
-### Additional Comments
+1. Create a new Unit Testing Project (latest version - 6.0)
+    - Command: `dotnet new <unit-test-template> --name <test-project-name> --output <folder-path-of-the-project>/<test-project-name>`
+    - Command (Example): `dotnet new xunit --name CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests --output tests/CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests`
+    - Examples (Unit Test Template): 
+        - `mstest` 
+        - `nunit` 
+        - `xunit` 
+
+2. Add the Test Project to the Solution
+    - Command (Example): `dotnet sln CSharp.VSCode.HelloWorld.sln add tests/CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests/*.csproj`
+
+3. Add a project reference
+    - Command (Example): `dotnet add tests/CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests/CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests.csproj reference src/CSharp.VSCode.HelloWorld.ConsoleApp.v60/CSharp.VSCode.HelloWorld.ConsoleApp.v60.csproj`
+        - Result: The following code block is added into the `tests/CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests/CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests.csproj` file.
+            ```
+            <ItemGroup>
+                <ProjectReference Include="..\..\src\CSharp.VSCode.HelloWorld.ConsoleApp.v60\CSharp.VSCode.HelloWorld.ConsoleApp.v60.csproj" />
+            </ItemGroup>
+            ```
+
+4. Implement a simple logic and a unit test to test that.
+    - Example (Implementation): `MathUtil.cs` 
+    - Example (Unit Test): `MathUtilTests.cs`
+    - Notes:
+        - Note that the implementation class should be inside the `CSharp.VSCode.HelloWorld.ConsoleApp.v60` folder and have the `CSharp.VSCode.HelloWorld.ConsoleApp.v60` namespace.
+        - Then in the Unit Test class, there must be the `using CSharp.VSCode.HelloWorld.ConsoleApp.v60` statement.
+
+5. Run the Unit Test!
+    - Command: `dotnet test <unit-test-csproj>`
+    - Command (Example): `dotnet test tests/CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests/CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests.csproj`
+
+## II. Others
+
+### A. Git & README.md
 
 - `README.md` and `.gitignore` need to be created separately.
 
+### B. Extensions 
 
-### References
+- C#, By Microsoft (`ms-dotnettools.csharp`)
+
+## III. References
 
 - [Microsoft - .NET - dotnet new](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
 - [Microsoft - .NET - dotnet sln](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-sln)
+- [Microsoft - .NET - Tutorial: Test a .NET class library using Visual Studio Code](https://docs.microsoft.com/en-us/dotnet/core/tutorials/testing-library-with-visual-studio-code?pivots=dotnet-6-0)

@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.VSCode.HelloWorld.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.VSCode.HelloWorld.ConsoleApp.v60", "src\CSharp.VSCode.HelloWorld.ConsoleApp.v60\CSharp.VSCode.HelloWorld.ConsoleApp.v60.csproj", "{8AC15038-769C-4C5E-BF7A-D02202BB72F5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{06419D22-1D0A-41DE-B4C9-654D3676F22A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests", "tests\CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests\CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests.csproj", "{45EFB8A6-E9BC-4DAB-8B54-87F5ACF99621}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +30,14 @@ Global
 		{8AC15038-769C-4C5E-BF7A-D02202BB72F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AC15038-769C-4C5E-BF7A-D02202BB72F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AC15038-769C-4C5E-BF7A-D02202BB72F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45EFB8A6-E9BC-4DAB-8B54-87F5ACF99621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45EFB8A6-E9BC-4DAB-8B54-87F5ACF99621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45EFB8A6-E9BC-4DAB-8B54-87F5ACF99621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45EFB8A6-E9BC-4DAB-8B54-87F5ACF99621}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E405C9FB-9DF7-475B-9851-1455A903D8BA} = {DF6CAE4A-28BC-403B-9FF0-B7C14A8DB8F9}
 		{8AC15038-769C-4C5E-BF7A-D02202BB72F5} = {DF6CAE4A-28BC-403B-9FF0-B7C14A8DB8F9}
+		{45EFB8A6-E9BC-4DAB-8B54-87F5ACF99621} = {06419D22-1D0A-41DE-B4C9-654D3676F22A}
 	EndGlobalSection
 EndGlobal
