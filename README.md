@@ -1,8 +1,21 @@
 # HelloWorld (CSharp + VSCode)
 
-## I. Essential
+## 0. Table of Contents
 
-### A. How to Setup?
+- [HelloWorld (CSharp + VSCode)](#helloworld-csharp--vscode)
+  - [0. Table of Contents](#0-table-of-contents)
+  - [1. Essential](#1-essential)
+    - [A) How to Setup?](#a-how-to-setup)
+    - [B) How to Build & Run?](#b-how-to-build--run)
+    - [C) How to Setup & Run Unit Tests?](#c-how-to-setup--run-unit-tests)
+  - [2. Others](#2-others)
+    - [A) Git & README.md](#a-git--readmemd)
+    - [B) Extensions](#b-extensions)
+  - [3. References](#3-references)
+
+## 1. Essential
+
+### A) How to Setup?
 
 1. Install `dotnet-sdk` (latest version - 6.0)
     - Homebrew
@@ -33,7 +46,7 @@
     - Command: `dotnet sln <solution-name> add **/*.csproj`
     - Command (Example): `dotnet sln CSharp.VSCode.HelloWorld.sln add **/*.csproj`
 
-### B. How to Build & Run?
+### B) How to Build & Run?
 
 1. Build a specific project.
     - Command: `dotnet build <project-path>`
@@ -43,7 +56,7 @@
     - Command: `dotnet run --project <project-path>`
     - Command (Example): `dotnet run --project src/CSharp.VSCode.HelloWorld.ConsoleApp.v60`
 
-### C. How to Setup & Run Unit Tests?
+### C) How to Setup & Run Unit Tests?
 
 1. Create a new Unit Testing Project (latest version - 6.0)
     - Command: `dotnet new <unit-test-template> --name <test-project-name> --output <folder-path-of-the-project>/<test-project-name>`
@@ -76,17 +89,17 @@
     - Command: `dotnet test <unit-test-csproj>`
     - Command (Example): `dotnet test tests/CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests/CSharp.VSCode.HelloWorld.ConsoleApp.v60.Tests.csproj`
 
-## II. Others
+## 2. Others
 
-### A. Git & README.md
+### A) Git & README.md
 
 - `README.md` and `.gitignore` need to be created separately.
 
-### B. Extensions 
+### B) Extensions 
 
 - C#, By Microsoft (`ms-dotnettools.csharp`)
 
-## III. References
+## 3. References
 
 - [Microsoft - .NET - dotnet new](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
 - [Microsoft - .NET - dotnet sln](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-sln)
